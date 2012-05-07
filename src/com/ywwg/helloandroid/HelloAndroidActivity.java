@@ -14,6 +14,12 @@ public class HelloAndroidActivity extends Activity {
         
         MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.my_music);
         mediaPlayer.start(); // no need to call prepare(); create() does that for you
+        
+        /*Camera.Parameters params = mCamera.getParameters();
+        String value;
+        value = Camera.Parameters.FLASH_MODE_TORCH;
+        params.setFlashMode(value);*/
+        
     }
 }
 
