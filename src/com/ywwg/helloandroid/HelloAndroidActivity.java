@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 
-
 public class HelloAndroidActivity extends Activity {
     /** Called when the activity is first created. */
     @Override
@@ -17,4 +16,3 @@ public class HelloAndroidActivity extends Activity {
         mediaPlayer.seekTo(10*1000);
     }
 }
-
