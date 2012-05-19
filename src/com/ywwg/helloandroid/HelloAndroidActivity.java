@@ -1,7 +1,7 @@
 package com.ywwg.helloandroid;
 
 import android.app.Activity;
-import android.media.MediaPlayer;
+import android.hardware.Camera;
 import android.os.Bundle;
 
 public class HelloAndroidActivity extends Activity {
@@ -10,14 +10,19 @@ public class HelloAndroidActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        
-        MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.my_music);
-        mediaPlayer.start(); // no need to call prepare(); create() does that for you
-        mediaPlayer.seekTo(10*1000);
 
-        /*Camera.Parameters params = mCamera.getParameters();
+        /*
+         * MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.my_music);
+         * mediaPlayer.start(); // no need to call prepare(); create() does that
+         *for you mediaPlayer.seekTo(10*1000);
+		 */
+
+        Camera mCamera;
+        mCamera = Camera.open();
+        
+        Camera.Parameters params = mCamera.getParameters(); 
         String value;
         value = Camera.Parameters.FLASH_MODE_TORCH;
-        params.setFlashMode(value);*/
+        params.setFlashMode(value);
     }
 }
